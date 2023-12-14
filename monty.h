@@ -38,3 +38,18 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+char *_strchr_(const char *, int);
+char *_strstr_(const char *, const char *);
+int _readfile_(char **, int);
+int _readline_(char *);
+char *_command_(const char *);
+int _value_(const char *);
+int _exe_(const char *, stack_t **);
+
+stack_t *push(stack_t **, unsigned int);
+stack_t *pall(stack_t **, unsigned int);
+stack_t *free_struct(stack_t *);
+void fix_head(stack_t *);
+
+#endif /*MONTY_H*/
